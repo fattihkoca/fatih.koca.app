@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500&display=swap');
+
+:root {
+    --color: #121314;
+    --cph-color: rgb(226, 232, 238);
+}
+
+.sprite-before:before {
+    background: url('../img/sprite.svg');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: calc(10px + 0.33vw);
+    color: var(--color);
+}
+
+@keyframes cphAnimation {
+    0% {
+        transform: translate3d(-30%, 0, 0);
+    }
+    100% {
+        transform: translate3d(30%, 0, 0);
+    }
+}
+
+@keyframes loadedAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    -webkit-overflow-scrolling:touch;
+}
+
+body * {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    vertical-align: baseline;
+    background: transparent;
+    line-height: inherit;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    list-style: none;
+}
+
+body *, body *:before {
+    box-sizing: border-box;
+}
+
+img {
+    text-indent: -9999px
+}
+
+img:not([src]) {
+    opacity: 0;
+}
+
+[data-loaded] {
+    animation: loadedAnimation .5s linear;
+}
+
+[data-visible] {
+    transition: transform .3s ease-in-out, opacity 1s;
+    will-change: transform, opacity;
+}
+
+[data-visible=false] {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(100vh) scale(.1, .1);
+}
+
+[data-visible=true] {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    z-index: 9999;
+}
+
+[data-cph] {
+    color: rgba(255, 255, 255, 0);
+    border: none !important;
+}
+
+[data-cph]:before, [data-cph]:after {
+    display: block;
+    position: absolute;
+    border-radius: 100px;
+    content: '';
+}
+
+[data-cph]:before {
+    z-index: 1;
+    top: 10%;
+    bottom: 10%;
+    right: 10%;
+    left: 10%;
+    background: var(--cph-color);
+}
+
+[data-cph]:after {
+    z-index: 2;
+    width: 250%;
+    margin-left: -100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    animation: cphAnimation .7s linear infinite;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0) 54%) 50% 50%;
+}
+
+.relative, [data-cph] {
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+.fit-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.fit-img img {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.affluent-link a {
+    position: relative;
+    padding: 0 2px;
+}
+
+.affluent-link a, .affluent-link a:hover {
+    color: var(--color);
+}
+
+.affluent-link a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    left: 0;
+    height: 3px;
+    background: var(--color);
+    opacity: .25;
+    transition: height .15s, bottom .15s;
+}
+
+.affluent-link a:hover:after {
+    height: calc(100% + 3px);
+}
+
+.v-space {
+    margin-bottom: 20px !important;
+}
+
+button {
+    cursor: pointer;
+}
+
+#notfound {
+}
