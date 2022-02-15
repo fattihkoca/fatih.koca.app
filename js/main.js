@@ -56,7 +56,21 @@ let url = "data.json",
             return id("video").remove();
         }
 
-        id("video").innerHTML = "<iframe src=\""+ data.video +"\" title=\""+ data.name +"\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+        let video = createEl("iframe"),
+            attr = [
+                ["src", data.video],
+                ["title", data.name],
+                ["frameborder", "0"],
+                ['allow', "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"],
+                ["allowfullscreen", ""],
+            ];
+
+        for(let a in attr) {
+            video.setAttribute(attr[a][0], attr[a][1]);
+        }
+
+        id("video").innerHTML = null;
+        id("video").appendChild(video);
     },
     addContents = function () {
         id("contents").innerHTML = null;
