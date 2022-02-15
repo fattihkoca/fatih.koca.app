@@ -2,9 +2,7 @@ let url = "data.json",
     data = {
         image: null,
         name: null,
-        knows: null,
-        title: null,
-        career: {},
+        contents: {},
         social: {},
         posts: {
             title: null,
@@ -45,54 +43,63 @@ let url = "data.json",
             id("image").setAttribute("src", data.image);
             id("image").setAttribute("alt", data.name);
             id("name").innerHTML = data.name;
-            id("knows").innerHTML = data.knows;
             id("title").innerHTML = data.title;
             id("posts-title").innerHTML = data.posts.title;
-            id("career").innerHTML = null;
-            id("social").innerHTML = null;
-
-            for (let i in data.career) {
-                let c = data.career[i],
-                    item = createEl("span"),
-                    title = createText(c.title + " "),
-                    company = createEl("a"),
-                    companyName = createText(c.company),
-                    comma = createText(", ");
-
-                if (i > 0) {
-                    id("career").appendChild(comma);
-                }
-
-                company.setAttribute("href", c.url);
-                company.setAttribute("target", "_blank");
-                company.setAttribute("rel", "noreferrer");
-                company.appendChild(companyName);
-
-                item.appendChild(title);
-                item.appendChild(company);
-
-                id("career").appendChild(item);
-            }
-
-            for (let i in data.social) {
-                let item = createEl("li"),
-                    link = createEl("a"),
-                    icon = createEl("i");
-
-                link.setAttribute("href", data.social[i]);
-                link.setAttribute("title", i.charAt(0).toUpperCase() + i.slice(1));
-                link.setAttribute("target", "_blank");
-                link.setAttribute("rel", "noreferrer");
-                icon.setAttribute("class", "sprite-before social-" + i);
-
-                link.appendChild(icon);
-                item.appendChild(link);
-
-                id("social").appendChild(item);
-            }
-
+            addVideo();
+            addContents();
+            addSocials();
             removeCph();
         });
+    },
+    addVideo = function() {
+        if(!data.video) {
+            return id("video").remove();
+        }
+
+        id("video").innerHTML = "<iframe src=\"https://www.youtube.com/embed/rgW_Bsxf53I\" title=\""+ data.name +"\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+    },
+    addContents = function () {
+        id("contents").innerHTML = null;
+
+        for(let key in data.contents) {
+            let d = data.contents[key],
+                item = createEl("ul");
+            item.setAttribute("class", "content content-" + key);
+
+            for (let i in d) {
+                let subItem = createEl("li");
+                subItem.innerHTML = mmd(d[i]);
+                item.appendChild(subItem);
+            }
+
+            id("contents").appendChild(item);
+        }
+    },
+    addSocials = function() {
+        id("social").innerHTML = null;
+
+        for (let i in data.social) {
+            let item = createEl("li"),
+                link = createEl("a"),
+                icon = createEl("i"),
+                attr = [
+                    ['href', data.social[i]],
+                    ['title', i.charAt(0).toUpperCase() + i.slice(1)],
+                    ['target', "_blank"],
+                    ['rel', "noreferrer"],
+                    ['class', "social-" + i],
+                ];
+
+            for(let a in attr) {
+                link.setAttribute(attr[a][0], attr[a][1]);
+            }
+
+            icon.setAttribute("class", "sprite-before");
+            link.appendChild(icon);
+            item.appendChild(link);
+
+            id("social").appendChild(item);
+        }
     },
     togglePosts = function (bool) {
         if (bool)
