@@ -56,7 +56,7 @@ let url = "data.json",
             return id("video").remove();
         }
 
-        id("video").innerHTML = "<iframe src=\"https://www.youtube.com/embed/rgW_Bsxf53I\" title=\""+ data.name +"\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+        id("video").innerHTML = "<iframe src=\""+ data.video +"\" title=\""+ data.name +"\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
     },
     addContents = function () {
         id("contents").innerHTML = null;
