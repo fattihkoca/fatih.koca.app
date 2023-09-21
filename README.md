@@ -1,7 +1,7 @@
 # Fatih Koca  
 
 
-🏢 CEO & Co-Founder of [Classest](https://classest.com)  
+🏢 CEO & Co-Founder at [Classest](https://classest.com)  
 🏷 Entrepreneur, Startup Investor  
 👨‍👩‍👧‍👦 Husband ([Tuğba Koca](https://tugba.koca.app)), father of two  
 👨‍💼 Business management, product & business development  
