@@ -12,4 +12,10 @@
 
 --
 
-Fatih Koca is an entrepreneur and business leader, serving as the Co-Founder and CEO of [Classest](https://classest.com), a cutting-edge online education platform in Turkey. Fatih Koca and his wife, [Tuğba Koca](https://tugba.koca.app), conceived the idea for [Classest](https://classest.com) while planning their children's educational future. Established in 2021, [Classest](https://classest.com) emerged as a response to the need for a modernized education system, addressing the shortcomings of traditional teaching methods. Recognizing the importance of personalized and sustainable education, Fatih Koca engaged with academics and industry professionals to develop a model that places students at the forefront, leveraging modern technology. Fatih Koca has been involved in many important events in the Startup ecosystem since 2020. In addition to his professional career as well as volunteering work for the development of the startup ecosystem in Turkey and supports open source projects.
+Fatih Koca is an entrepreneur and business leader, serving as the Co-Founder and CEO of [Classest](https://classest.com), a cutting-edge online education platform in Turkey.  
+
+Fatih Koca and his wife, [Tuğba Koca](https://tugba.koca.app), conceived the idea for [Classest](https://classest.com) while planning their children's educational future. Established in 2021, [Classest](https://classest.com) emerged as a response to the need for a modernized education system, addressing the shortcomings of traditional teaching methods. Recognizing the importance of personalized and sustainable education, Fatih Koca engaged with academics and industry professionals to develop a model that places students at the forefront, leveraging modern technology.  
+
+Fatih Koca has been involved in many important events in the Startup ecosystem since 2020. In addition to his professional career as well as volunteering work for the development of the startup ecosystem in Turkey and supports open source projects.  
+
+Collaborating with major domestic and international brands, Classest aims to expand its global footprint in 2024. Fatih Koca has been an active participant in the startup ecosystem since 2020, contributing to the development of Turkey's startup ecosystem both professionally and as a volunteer. He also supports open-source projects.
