@@ -2,7 +2,7 @@
 
 <p align="center"><a href="https://www.youtube.com/watch?v=1q3xags1uDo" target="_blank"><img src="https://github.com/user-attachments/assets/2d7c04db-ffa6-40ca-8ba0-fe4021c81b26"></a></p>  
 
-👨‍👩‍👧‍👦 Proud husband to [Tuğba Koca](https://tugbayraktarkoca.netlify.app) and lucky dad of two awesome kids!  
+👨‍👩‍👧‍👦 Proud husband to [Tuğba Koca](tugba.fkoca.com) and lucky dad of two awesome kids!  
 💻 Full-stack problem solver, UI/UX enthusiast, and tech geek  
 🏢 Co-founder at [Classest](https://classest.com) – where education meets innovation  
 🎨 I dabble in graphic design and make startups a reality  
@@ -86,4 +86,4 @@ Looking to build your next big thing or need a seasoned frontend developer to ta
 📫 **Find me here:**  
 💼 [LinkedIn](https://linkedin.com/in/fatihkoca)  
 🐦 [Twitter](https://twitter.com/fatihkoca)  
-🌐 [Website](https://fatihkoca.netlify.app)
+🌐 [Website](https://fkoca.com)
